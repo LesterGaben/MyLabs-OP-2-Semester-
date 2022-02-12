@@ -1,7 +1,6 @@
-
 def input_text_in_file(file_name):
     with open(file_name, "w") as my_file:
-        print("Введіть текст(щоб зупинити введення, зажміть у новому рядку ctrl + Z і підтвердіть клавішою enter):")
+        print("Enter text (to stop typing, press ctrl + Z on a new line and confirm with enter):")
         try:
             while(True): 
                 my_file.write(input() + "\n")
@@ -10,7 +9,7 @@ def input_text_in_file(file_name):
     pass
 
 def output_text_from_file(file_name):
-    print("\nВміст файлу " + file_name + ":")
+    print("\nFile contents " + file_name + ":")
     with open(file_name, "r") as my_file:
         print(my_file.read())
     pass
@@ -35,9 +34,9 @@ file_name = "file.txt"
 input_text_in_file(file_name)
 output_text_from_file(file_name)
 
-symbol = input("Введіть бажану літеру: ")
+symbol = input("Enter the desired letter: ")
 words_with_symbol = find_words_with_symbol(file_name, symbol)
-print("\nСлова, що починаються на задану літеру:\n" + words_with_symbol + "\n")
+print("\nWords that begin with a given letter:\n" + words_with_symbol + "\n")
 
 new_file_name = "new_file.txt"
 input_words_in_new_file(new_file_name, words_with_symbol)
