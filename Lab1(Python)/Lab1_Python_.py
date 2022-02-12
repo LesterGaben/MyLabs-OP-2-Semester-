@@ -1,4 +1,4 @@
-# -*- coding: cp1251 -*-
+
 def input_text_in_file(file_name):
     with open(file_name, "w") as my_file:
         print("Введіть текст(щоб зупинити введення, зажміть у новому рядку ctrl + Z і підтвердіть клавішою enter):")
