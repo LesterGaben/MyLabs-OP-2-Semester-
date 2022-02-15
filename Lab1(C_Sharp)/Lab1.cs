@@ -17,7 +17,7 @@ namespace Lab1_C_Sharp_ {
             output_text_from_file(file_name);
 
             Console.Write("Введіть будь ласка літеру: ");
-            string symbol = Console.ReadLine();
+            char symbol = Convert.ToChar(Console.ReadLine());
 
             string words_with_symbols = find_words_with_symbol(file_name, symbol);
             Console.WriteLine("\nСлова, що починаються на задану літеру:");
@@ -46,13 +46,13 @@ namespace Lab1_C_Sharp_ {
             Console.WriteLine("\nВміст файлу " + file_name + ":\n" + File.ReadAllText(file_name));
         }
 
-        static string find_words_with_symbol(string file_name, string symbol) {
+        static string find_words_with_symbol(string file_name, char symbol) {
             string words_with_symbols = "";
             string[] words;
             foreach (string line in File.ReadAllLines(file_name)) {
                 words = line.Split();
                 foreach (string word in words) {
-                    if (word[0] == Convert.ToChar(symbol)) {
+                    if (word[0] == symbol) {
                         words_with_symbols += word + " ";
                     }
                 }
