@@ -16,7 +16,7 @@ namespace Lab6_C_Sharp_ {
             top.right = Create(n - 1, 0);
         }
 
-        public Node Create(int n, int a) {
+        private Node Create(int n, int a) {
             Node node = new Node(n - a);
             if (a == n - 1) {
                 node.left = null;
